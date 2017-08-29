@@ -1,0 +1,597 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BayescafePostmanExample",
+		"_postman_id": "4e2105ee-537f-a9f4-f0e9-060b0e19cbce",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"random_username\", (\"0000\" + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{url}}/users",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "{{random_username}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "nickname",
+							"value": "{{random_username}}",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "256bc09c-53e1-4079-991c-b08fd960589d",
+					"name": "注册成功",
+					"originalRequest": {
+						"url": "{{url}}/users",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{random_username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "{{random_username}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 10 Oct 2015 06:38:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Via",
+							"key": "Via",
+							"value": "10.67.15.171",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "308",
+					"body": "{\"msg\":\"\\u6ce8\\u518c\\u6210\\u529f\"}"
+				},
+				{
+					"id": "52705868-11b6-48b2-bab7-cacab0939ee0",
+					"name": "注册成功",
+					"originalRequest": {
+						"url": "{{url}}/users",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{random_username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "{{random_username}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 10 Oct 2015 06:38:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Via",
+							"key": "Via",
+							"value": "10.67.15.171",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "308",
+					"body": "{\"msg\":\"\\u6ce8\\u518c\\u6210\\u529f\"}"
+				},
+				{
+					"id": "090f7967-3b45-4950-a1d0-87cdafc94df0",
+					"name": "注册成功",
+					"originalRequest": {
+						"url": "{{url}}/users",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{random_username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "{{random_username}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 10 Oct 2015 06:38:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Via",
+							"key": "Via",
+							"value": "10.67.15.171",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "308",
+					"body": "{\"msg\":\"\\u6ce8\\u518c\\u6210\\u529f\"}"
+				},
+				{
+					"id": "c8e09e17-d6fb-4016-ac40-22b4678fc07c",
+					"name": "注册成功",
+					"originalRequest": {
+						"url": "{{url}}/users",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{random_username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "{{random_username}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 10 Oct 2015 06:38:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Via",
+							"key": "Via",
+							"value": "10.67.15.171",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "308",
+					"body": "{\"msg\":\"\\u6ce8\\u518c\\u6210\\u529f\"}"
+				},
+				{
+					"id": "5782bf84-c563-4bde-a76c-e78988ff9fcf",
+					"name": "注册成功",
+					"originalRequest": {
+						"url": "{{url}}/users",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{random_username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "{{random_username}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "javascript",
+					"_postman_previewtype": "html",
+					"header": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Sat, 10 Oct 2015 06:38:16 GMT",
+							"description": ""
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "nginx",
+							"description": ""
+						},
+						{
+							"name": "Transfer-Encoding",
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "Via",
+							"key": "Via",
+							"value": "10.67.15.171",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "308",
+					"body": "{\"msg\":\"\\u6ce8\\u518c\\u6210\\u529f\"}"
+				}
+			]
+		},
+		{
+			"name": "登录",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var data = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", data.token);",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{url}}/authentication",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "{{random_username}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "添加卡",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"random_cardno\", Math.round(Math.random()*9999999));",
+							"",
+							"postman.setEnvironmentVariable(\"random_cardname\", (\"0000\" + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{url}}/cards",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cardno",
+							"value": "{{random_cardno}}",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "{{random_cardname}}",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询卡",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"tests[\"check cardname\"] = data.desc === environment.random_cardname;",
+							"",
+							"postman.setEnvironmentVariable(\"new_card_id\", data.id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{url}}/cards/{{random_cardno}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "充值",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{url}}/deposit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "cardid",
+							"value": "{{new_card_id}}",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
